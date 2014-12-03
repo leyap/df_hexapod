@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "keycheck.h"
+//#include "keycheck.h"
 
 #define up_button	8
 #define down_button	A1
@@ -10,9 +10,9 @@
 #define level_stick A2
 #define vertical_stick A3
 
- uint16_t key_analog_range;
- uint16_t key_delay_time;
- 
+uint16_t key_analog_range;
+uint16_t key_delay_time;
+
 int dtime = 30;
 
 int vertical_value=0;

@@ -1,7 +1,7 @@
 /*
  *	created:	2013-09-10
  *	by:		lisper (leyapin@gmail.com)
- *	description:	control cds55 servo
+ *	description:	library for cds5516 servo
  *	version:	1.0
  *	last:		2013-09-11 11:02
  *
@@ -85,7 +85,7 @@
 #define P_PUNCH_L		48
 #define P_PUNCH_H		49
 
-//¡ª	Instruction ¡ª
+//â€”	Instruction â€”
 #define INST_PING		0x01
 #define INST_READ		0x02
 #define INST_WRITE		0x03
@@ -125,7 +125,6 @@ void cds55_pos (uint8_t id, uint16_t pos) {
 	spi_buf[9] = '\n';	//more one
 	spi_send (spi_buf, 5 + 5);	//send command data by spi
 	delayMicroseconds (160);
-	//delayMicroseconds (1160);
 }
 
 void cds55_all_pos (uint8_t* id_array, uint16_t* pos_array, uint8_t length) {
